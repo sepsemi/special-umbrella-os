@@ -30,7 +30,11 @@ modules:
       install-weak-deps: false
       packages:
         - fcft
+        - wofi
+        - tmux
+        - foot
         - neovim
+        - wlroots
         - fcft-devel
 
     remove: 
