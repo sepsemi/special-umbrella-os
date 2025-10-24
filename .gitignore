@@ -4,3 +4,4 @@ cosign.private
 /flatpacks
 /recipe.yml.bak
 /*.txt
+/.bluebuild-scripts_*

@@ -105,3 +105,11 @@ modules:
         - evince-libs
         - evince-djvu
         - localsearch
+
+        - samba-client
+        - mutter-common
+        - hyperv-daemons
+        - amd-gpu-firmware
+        - amd-ucode-firmware
+        - ansible-srpm-macros
+
