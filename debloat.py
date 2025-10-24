@@ -1,6 +1,6 @@
 from pathlib import Path
 
-packages_path = Path('/var/home/user/development/sboms/secureblue_nvidia_silverblue_packages.txt')
+packages_path = Path('/var/home/user/development/sboms/secureblue_nvidia_silverblue_packages_2.txt')
 debloated_packages_path = Path(
     '/var/home/user/development/personal/atomic-os-custom-testing/debloated.txt')
 

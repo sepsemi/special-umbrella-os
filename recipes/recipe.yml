@@ -24,6 +24,8 @@ modules:
           - com.vscodium.codium
           - app.grayjay.Grayjay
       - scope: user
+
+
   
   - type: dnf
     install:
@@ -40,6 +42,7 @@ modules:
         - swaylock
         - wlr-randr
         - fcft-devel
+        - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
     remove: 
       auto-remove: false
