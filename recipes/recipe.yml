@@ -13,3 +13,27 @@ modules:
         destination: /
 
   - type: signing
+
+  - type: default-flatpaks
+  configurations:
+    - notify: true
+      scope: system
+      install:
+        - org.signal.Signal
+        - com.bitwarden.desktop
+        - com.vscodium.codium
+        - app.grayjay.Grayjay
+    - scope: user
+  
+  - type: dnf
+    install:
+      install-weak-deps: false
+      packages:
+        - fcft
+        - neovim
+        - fcft-devel
+
+    remove: 
+      auto-remove: true
+      packages: 
+        
