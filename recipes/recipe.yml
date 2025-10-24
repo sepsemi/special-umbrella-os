@@ -33,8 +33,12 @@ modules:
         - wofi
         - tmux
         - foot
+        - swaybg
         - neovim
         - wlroots
+        - swayidle
+        - swaylock
+        - wlr-randr
         - fcft-devel
 
     remove: 
