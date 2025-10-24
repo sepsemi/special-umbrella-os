@@ -88,3 +88,46 @@ modules:
         - mutter
         - nautilus
         - xdg-desktop-portal-gnome
+
+        # Slowly add more packages
+        - ibus
+        - cups
+        - slang
+        - gsound
+        - zeromq
+        - freerdp
+        - openpgm
+        - libwacom
+        - yelp-xsl
+        - qrencode
+        - yelp-libs
+        - whois-nls
+        - switcheroo
+        - mageMagick
+        - evince-libs
+        - evince-djvu
+        - localsearch
+        - vo-amrwbenc
+        - samba-client
+        - mutter-common
+        - hyperv-daemons
+        - amd-gpu-firmware
+        - amd-ucode-firmware
+        - ansible-srpm-macros
+
+        - emacs-filesystem
+        - secureblue-logos
+        - evince-previewer
+        - mozilla-filesystem
+        - evince-thumbnailer
+        - adobe-mappings-cmap
+        - linux-firmware-whence
+        - mobile-broadband-provider
+        - fedora-workstation-backgrounds
+
+        - mt7xxx-firmware
+        - amd-gpu-firmware
+        - brcmfmac-firmware
+        - amd-ucode-firmware
+        - nxpwireless-firmware
+        - cirrus-audio-firmware
