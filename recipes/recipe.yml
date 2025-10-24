@@ -114,7 +114,6 @@ modules:
         - ansible-srpm-macros
 
         - emacs-filesystem
-        - secureblue-logos
         - evince-previewer
         - mozilla-filesystem
         - evince-thumbnailer
@@ -123,7 +122,7 @@ modules:
         - mobile-broadband-provider
         - fedora-workstation-backgrounds
 
-                - mt7xxx-firmware
+        - mt7xxx-firmware
         - amd-gpu-firmware
         - brcmfmac-firmware
         - amd-ucode-firmware
@@ -167,5 +166,4 @@ modules:
         - kf6-kimageformats
         - f42-backgrounds-gnome
 
-
-
+        # run0 bluebuild build --rechunk --cache-layers ./recipes/recipe.yml
