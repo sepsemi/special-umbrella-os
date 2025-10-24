@@ -36,5 +36,47 @@ modules:
     remove: 
       auto-remove: true
       packages: 
-        - gnome-\*
-
+        - gnome-app-list
+        - gnome-autoar
+        - gnome-backgrounds
+        - gnome-bluetooth
+        - gnome-bluetooth-libs
+        - gnome-browser-connector
+        - gnome-classic-session
+        - gnome-color-manager
+        - gnome-control-center
+        - gnome-control-center-filesystem
+        - gnome-desktop3
+        - gnome-desktop4
+        - gnome-disk-utility
+        - gnome-epub-thumbnailer
+        - gnome-initial-setup
+        - gnome-keyring
+        - gnome-keyring-pam
+        - gnome-menus
+        - gnome-online-accounts
+        - gnome-online-accounts-libs
+        - gnome-session
+        - gnome-session-wayland-session
+        - gnome-settings-daemon
+        - gnome-shell
+        - gnome-shell-common
+        - gnome-shell-extension-apps-menu
+        - gnome-shell-extension-common
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-places-menu
+        - gnome-shell-extension-window-list
+        - gnome-software
+        - gnome-system-monitor
+        - gnome-tweaks
+        - gnome-user-docs
+        - NetworkManager-vpnc-gnome
+        - evolution-data-server
+        - evolution-data-server-langpacks
+        - gdm
+        - gvfs-goa
+        - libgdata
+        - msgraph
+        - mutter
+        - nautilus
+        - xdg-desktop-portal-gnome
