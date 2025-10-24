@@ -91,6 +91,7 @@ modules:
 
         # Slowly add more packages
         - ibus
+        - cups
         - slang
         - gsound
         - zeromq
@@ -123,3 +124,48 @@ modules:
         - linux-firmware-whence
         - mobile-broadband-provider
         - fedora-workstation-backgrounds
+
+        - mt7xxx-firmware
+        - amd-gpu-firmware
+        - brcmfmac-firmware
+        - amd-ucode-firmware
+        - nxpwireless-firmware
+        - cirrus-audio-firmware
+
+        - fros
+        - opensc
+        - epiphany
+
+        - libsane-hpaio
+        - libsane-airscan
+        - sane-backends-libs
+        - sane-backends-drivers-cameras
+        - sane-backends-drivers-scanners
+
+
+        - gvfs
+        - gvfs-afc
+        - gvfs-afp
+        - gvfs-smb
+        - gvfs-mtp
+        - gvfs-fuse
+        - gvfs-client
+        - gvfs-gphoto2
+        - speech-dispatcher
+        - desktop-backgrounds-gnome
+
+        - imath
+        - avahi
+        - bluez
+        - fprintd
+        - poppler
+        - malcontent
+        - librabbitmq
+        - ghostscript
+        - nilfs-utils
+        - kf6-karchive
+        - kf6-filesystem
+        - fedora-bookmarks
+        - kf6-kimageformats
+        - f42-backgrounds-gnome
+
