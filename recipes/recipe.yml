@@ -36,8 +36,5 @@ modules:
     remove: 
       auto-remove: true
       packages: 
-        - vim
+        - gnome-\*
 
-    group-remove:
-      packages:
-        - gnome-desktop
