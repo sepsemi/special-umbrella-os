@@ -42,7 +42,7 @@ modules:
         - fcft-devel
 
     remove: 
-      auto-remove: true
+      auto-remove: false
       packages: 
         - gnome-app-list
         - gnome-autoar
