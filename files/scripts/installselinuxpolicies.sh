@@ -7,4 +7,5 @@ cd ./selinux/google_chrome/
 make -f /usr/share/selinux/devel/Makefile googlechrome.pp
 
 semodule -v -i googlechrome.pp
-restorecon -FRv /lib/opt/google/chrome/
+echo 'Restoring permissions:'
+restorecon -FRv /usr/lib/opt/google/chrome/chrome
