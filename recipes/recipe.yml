@@ -25,7 +25,9 @@ modules:
           - app.grayjay.Grayjay
       - scope: user
 
-
+  - type: script
+    scripts:
+      - installselinuxpolicies.sh
   
   - type: dnf
     install:
