@@ -172,3 +172,8 @@ modules:
         - f42-backgrounds-gnome
 
         # run0 bluebuild build --rechunk --cache-layers ./recipes/recipe.yml
+
+      
+  - type: script
+    scripts:
+      - installselinuxpolicies.sh
