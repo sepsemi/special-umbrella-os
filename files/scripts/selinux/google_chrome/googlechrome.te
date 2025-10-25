@@ -1,0 +1,35 @@
+policy_module(googlechrome, 1.0.0)
+
+attribute_role googlechrome_roles;
+roleattribute object_r googlechrome_roles;
+
+type googlechrome_t;
+type googlechrome_exec_t;
+
+domain_type(googlechrome_t, googlechrome_exec_t)
+application_domain(googlechrome_t, googlechrome_exec_t)
+
+role googlechrome_roles types googlechrome_t;
+
+
+unconfined_domain_noaudit(googlechrome_t)
+allow googlechrome_t self:user_namespace create;
+
+optional_policy(`
+	gen_require(`
+		type unconfined_t;
+		role unconfined_r;
+	')
+
+	googlechrome_run(unconfined_t, unconfined_r)
+')
+
+gen_require(`
+	type bin_t;
+	type tmp_t;
+	type cert_t;
+	type cgroup_t;
+	type cache_home_t;
+	type config_home_t;
+	type chrome_sandbox_home_t;
+')
