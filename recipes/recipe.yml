@@ -44,7 +44,7 @@ modules:
         - pipewire
         - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
-  - from-file: common/nvidia-install.yml
+  - from-file: common/nvidia.yml
 
   - type: script
     scripts:
