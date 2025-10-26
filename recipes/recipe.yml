@@ -48,8 +48,9 @@ modules:
 
   - type: script
     scripts:
-        - installselinuxpolicies.sh
         - httpsmirrors.sh
+        - installselinuxpolicies.sh
+      
         - regenerateinitramfs.sh
         - removesuid.sh
         - enable-preset-services.sh
