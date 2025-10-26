@@ -1,0 +1,175 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: secureflop
+description: This is a silverblue-nvidia-hardened image without gnome
+
+base-image: ghcr.io/secureblue/silverblue-nvidia-hardened
+image-version: latest
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: signing
+
+  - type: default-flatpaks
+    configurations:
+      - notify: true
+        scope: system
+        install:
+          - org.signal.Signal
+          - com.bitwarden.desktop
+          - com.vscodium.codium
+          - app.grayjay.Grayjay
+      - scope: user
+
+  - type: dnf
+    install:
+      install-weak-deps: false
+      packages:
+        - fcft
+        - wofi
+        - tmux
+        - foot
+        - swaybg
+        - neovim
+        - wlroots
+        - swayidle
+        - swaylock
+        - wlr-randr
+        - fcft-devel
+        - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+
+    remove: 
+      auto-remove: false
+      packages: 
+        - gnome-app-list
+        - gnome-autoar
+        - gnome-backgrounds
+        - gnome-bluetooth
+        - gnome-bluetooth-libs
+        - gnome-browser-connector
+        - gnome-classic-session
+        - gnome-color-manager
+        - gnome-control-center
+        - gnome-control-center-filesystem
+        - gnome-desktop3
+        - gnome-desktop4
+        - gnome-disk-utility
+        - gnome-epub-thumbnailer
+        - gnome-initial-setup
+        - gnome-keyring
+        - gnome-keyring-pam
+        - gnome-menus
+        - gnome-online-accounts
+        - gnome-online-accounts-libs
+        - gnome-session
+        - gnome-session-wayland-session
+        - gnome-settings-daemon
+        - gnome-shell
+        - gnome-shell-common
+        - gnome-shell-extension-apps-menu
+        - gnome-shell-extension-common
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-places-menu
+        - gnome-shell-extension-window-list
+        - gnome-software
+        - gnome-system-monitor
+        - gnome-tweaks
+        - gnome-user-docs
+        - NetworkManager-vpnc-gnome
+        - evolution-data-server
+        - evolution-data-server-langpacks
+        - gdm
+        - gvfs-goa
+        - libgdata
+        - msgraph
+        - mutter
+        - nautilus
+        - xdg-desktop-portal-gnome
+
+        # Slowly add more packages
+        - ibus
+        - slang
+        - gsound
+        - zeromq
+        - freerdp
+        - openpgm
+        - libwacom
+        - yelp-xsl
+        - qrencode
+        - yelp-libs
+
+        - mageMagick
+        - evince-libs
+        - evince-djvu
+        - localsearch
+
+        - samba-client
+        - mutter-common
+        - hyperv-daemons
+        - amd-gpu-firmware
+        - amd-ucode-firmware
+        - ansible-srpm-macros
+
+        - emacs-filesystem
+        - secureblue-logos
+        - evince-previewer
+        - mozilla-filesystem
+        - evince-thumbnailer
+        - adobe-mappings-cmap
+        - linux-firmware-whence
+        - mobile-broadband-provider
+        - fedora-workstation-backgrounds
+
+        - mt7xxx-firmware
+        - amd-gpu-firmware
+        - brcmfmac-firmware
+        - amd-ucode-firmware
+        - nxpwireless-firmware
+        - cirrus-audio-firmware
+
+        - fros
+        - opensc
+        - epiphany
+
+        - libsane-hpaio
+        - libsane-airscan
+        - sane-backends-libs
+        - sane-backends-drivers-cameras
+        - sane-backends-drivers-scanners
+
+
+        - gvfs
+        - gvfs-afc
+        - gvfs-afp
+        - gvfs-smb
+        - gvfs-mtp
+        - gvfs-fuse
+        - gvfs-client
+        - gvfs-gphoto2
+        - speech-dispatcher
+        - desktop-backgrounds-gnome
+
+        - imath
+        - bluez
+        - fprintd
+        - poppler
+        - malcontent
+        - librabbitmq
+        - ghostscript
+        - nilfs-utils
+        - kf6-karchive
+        - kf6-filesystem
+        - fedora-bookmarks
+        - kf6-kimageformats
+        - f42-backgrounds-gnome
+
+        # run0 bluebuild build --rechunk --cache-layers ./recipes/recipe.yml
+
+      
+  - type: script
+    scripts:
+      - installselinuxpolicies.sh
