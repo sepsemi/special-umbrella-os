@@ -1,0 +1,12 @@
+modules:
+  - type: script
+    scripts:
+      - installnvidiapackages.sh
+      
+      - setearlyloading.sh
+      - setdrmvariables.sh
+      - removeunusedrepos.sh
+  - type: files
+    files:
+      - source: system/nvidia
+        destination: /

@@ -44,17 +44,14 @@ modules:
         - pipewire
         - https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
+  - from-file: common/nvidia-install.yml
+
   - type: script
     scripts:
-      - installnvidiapackages.sh
-      - installselinuxpolicies.sh
+        - installselinuxpolicies.sh
+        - httpsmirrors.sh
+        - regenerateinitramfs.sh
+        - removesuid.sh
+        - enable-preset-services.sh
 
-      - httpsmirrors.sh
-      - setearlyloading.sh
-      - setdrmvariables.sh
-
-      - removeunusedrepos.sh
-      - regenerateinitramfs.sh
-
-      - removesuid.sh
-      - regenerateinitramfs.sh
+    
