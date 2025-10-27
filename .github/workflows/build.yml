@@ -40,4 +40,4 @@ jobs:
           
           rechunk: false
           use_cache: false
-          maximize_build_space: false
+          maximize_build_space: true
