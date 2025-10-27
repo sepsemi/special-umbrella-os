@@ -39,5 +39,5 @@ jobs:
           pr_event_number: ${{ github.event.number }}
           
           rechunk: false
-          use_cache: true
-          maximize_build_space: false # We don't care because our images are less than 3GB
+          use_cache: false
+          maximize_build_space: false
